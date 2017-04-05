@@ -1,0 +1,39 @@
+<!--
+Generated template for the Costumer page.
+
+See http://ionicframework.com/docs/v2/components/#navigation for more info on
+Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>Customers</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-buttons start>
+        <button (click)="refresh()">Refresh</button>
+    </ion-buttons>
+    <form (ngSubmit)="addCustomer()">
+        <ion-item>
+            <ion-label fixed>Name</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="customer.name" name="name" placeholder="Name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Address</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="customer.address" name="address" placeholder="Address"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Type</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="customer.container" name="container"  placeholder="Type"></ion-input>
+        </ion-item>
+
+        <div padding>
+            <button ion-button type="submit">Add Customer</button>
+        </div>
+    </form>
+    <ion-list>
+        <ion-item *ngFor="let c of customersArrayArray">
+            {{c.name}} {{c.address}} {{c.container}}
+        </ion-item>
+    </ion-list>
+</ion-content>

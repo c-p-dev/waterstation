@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h2>List of Customers</h2>
+  <ion-list>
+       <ion-item *ngFor="let c of customersArray">
+           {{c.name}} {{c.address}} {{c.container}}
+       </ion-item>
+   </ion-list>
+</ion-content>
